@@ -1,6 +1,8 @@
 package CaseStudy.config;
 
+import CaseStudy.services.LaborContractService;
 import CaseStudy.services.PositionService;
+import CaseStudy.services.impl.LaborContractServiceImpl;
 import CaseStudy.services.impl.PositionServiceImpl;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -127,5 +129,9 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
     @Bean
     public PositionService positionService(){
         return new PositionServiceImpl();
+    }
+    @Bean
+    public LaborContractService laborContractService(){
+        return new LaborContractServiceImpl();
     }
 }
